@@ -1,10 +1,3 @@
----
-runme:
-  id: 01HMWQ2E4EZYRE2B89ENSJXWCF
-  version: v2.2
----
-
-
 Basic Go app for experimenging and learning of Go and authentication, including JWT. uilt on Fiber framework.
 
 
