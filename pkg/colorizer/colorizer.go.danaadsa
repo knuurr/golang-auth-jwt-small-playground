@@ -1,0 +1,22 @@
+package colorizer
+
+import "fmt"
+
+// ANSI escape codes for text color
+var colorCodes = map[string]string{
+	"red":    "\033[91m",
+	"green":  "\033[92m",
+	"yellow": "\033[93m",
+	"blue":   "\033[94m",
+	"purple": "\033[95m",
+	"reset":  "\033[0m",
+}
+
+// PrintColoredText prints colored text to the terminal
+func PrintColoredText(color, text string) {
+	code, exists := colorCodes[color]
+	if !exists {
+		code = colorCodes["reset"] // Default to reset if color is not found
+	}
+	fmt.Printf("%s%s%s\n", code, text, colorCodes["reset"])
+}
